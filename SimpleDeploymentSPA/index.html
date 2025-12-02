@@ -189,7 +189,7 @@
                     linkAnchor.href = linkUrl;
                     linkAnchor.target = "_blank";
                     linkAnchor.textContent = linkName;
-                    if (linksDiv.childElementCount > 0) {
+                    if (linksDiv.childElementCount > 1) {
                         const separator = document.createTextNode(" | ");
                         linksDiv.appendChild(separator);
                     }
@@ -296,7 +296,8 @@
             certCard.appendChild(subtitle);
 
             if (cert.credentialLink) {
-                const credLink = document.createElement("p");
+                const credLink = document.createElement("div");
+                credLink.classList.add("credential-link");
                 credLink.innerHTML = `<strong>Credential:</strong> <a href="${cert.credentialLink}" target="_blank">View Credential</a>`;
                 certCard.appendChild(credLink);
             }

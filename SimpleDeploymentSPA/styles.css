@@ -148,15 +148,17 @@ div.tags-container button {
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
 }
-
+.credential-link,
 .project-links {
-    margin-top: 0.8rem;
+    margin-top: 0.6rem;
 }
 .grade,
+.credential-link a,
 .project-links a {
     color: var(--color-secondary);
     padding: 0.5rem 0.5rem;
 }
+.credential-link a:hover,
 .project-links a:hover {
     text-decoration: underline;
     background-color: var(--color-bg-secondary);

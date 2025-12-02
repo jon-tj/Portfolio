@@ -215,6 +215,7 @@
                 imagesDiv.appendChild(img);
                 infoCardContainer.appendChild(imagesDiv);
 
+                if (project.images.length <= 1) continue;
                 const imagesHandles = document.createElement("div");
                 imagesHandles.classList.add("handles");
                 imagesDiv.appendChild(imagesHandles);

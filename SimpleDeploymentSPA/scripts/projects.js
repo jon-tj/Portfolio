@@ -96,6 +96,11 @@ const PROJECTS = [
       coordinate tasks within the team. The result was a research-ready platform that UiS could 
       confidently build on for future studies in early detection of neurodegenerative diseases.
       `
+        ],
+        images: [
+            "images/projects/dementia-1.png",
+            "images/projects/dementia-2.png",
+            "images/projects/dementia-3.png",
         ]
     },
     {

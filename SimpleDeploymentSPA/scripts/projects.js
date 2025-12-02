@@ -25,7 +25,7 @@ const PROJECTS = [
     {
         name: "LootVault",
         grade: "A",
-        links: { "Public repo": "https://github.com/jon-tj/LootVault" },
+        links: { "Public repo": "https://github.com/jon-tj/LootVault", "Code walkthrough": "https://www.youtube.com/watch?v=UfBDbnXRj_k" },
         role: "Fullstack Developer",
         duration: ["2025-01", "2025-11"],
         tags: [
@@ -55,6 +55,12 @@ const PROJECTS = [
       This project taught me a lot about fullstack development, cloud deployment, and working 
       effectively in a fast-paced team. It's something I'm proud to showcase in my portfolio!
       `
+        ],
+        images: [
+            "images/projects/lootvault-1.png",
+            "images/projects/lootvault-2.png",
+            "images/projects/lootvault-3.png",
+            "images/projects/lootvault-4.png",
         ]
     },
     {

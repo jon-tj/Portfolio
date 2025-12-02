@@ -1,0 +1,92 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--color-bg-secondary);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-muted);
+}
+body.color-transition {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+section {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.info-card {
+    background: var(--color-bg);
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.fade-in {
+    animation: fadeIn 0.7s ease;
+}
+
+h1,
+h2 {
+    color: var(--color-primary);
+}
+
+a,
+p,
+button {
+    color: var(--color-text-muted);
+}
+
+a {
+    text-decoration: none;
+}
+
+.info-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-surface);
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid var(--color-border-strong);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+button.no-bg {
+    background-color: transparent;
+    border: none;
+}
+button:hover {
+    background-color: var(--color-surface-hover);
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cols-7-3 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 1rem;
+}

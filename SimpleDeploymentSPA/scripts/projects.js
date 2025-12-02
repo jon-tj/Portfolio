@@ -104,6 +104,24 @@ const PROJECTS = [
         ]
     },
     {
+        name: "Techxplosion Hackathon",
+        role: "Python Developer",
+        links: { "Public repo": "", "LinkedIn Post": "https://www.linkedin.com/posts/-lan-anh-tran-_futureengineers-innovation-energyindustry-activity-7297177975542706176-XEgu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEbbP5kBUYSRcj__qnvNXKsgAe5ktpQmzjg" },
+        tags: [
+            "html",
+            "js",
+        ],
+        duration: ["2025-02", "2025-02"],
+        paragraphs: [
+            `Won the Equinor-sponsored hackathon at the University of Stavanger by building a simulation of
+            the power grid using pure JS. The simulation modeled energy production, consumption,
+            and distribution across a network of nodes, allowing users to visualize grid dynamics in real-time.`,
+        ],
+        images: [
+            "images/projects/hackathon-1.png"
+        ],
+    },
+    {
         name: "Online Multiplayer Drawing Game",
         role: ".NET Developer, Team Lead",
         links: { "Public repo": "https://github.com/jon-tj/Dat240-2024" },

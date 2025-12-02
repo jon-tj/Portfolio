@@ -144,6 +144,13 @@
 
             <section>
                 <br />
+                <h1>Work Experience</h1>
+                <hr />
+            </section>
+            <div id="work-experience-container"></div>
+
+            <section>
+                <br />
                 <h1>Certifications</h1>
                 <hr />
             </section>
@@ -215,28 +222,29 @@
                 imagesDiv.appendChild(img);
                 infoCardContainer.appendChild(imagesDiv);
 
-                if (project.images.length <= 1) continue;
-                const imagesHandles = document.createElement("div");
-                imagesHandles.classList.add("handles");
-                imagesDiv.appendChild(imagesHandles);
-                const prevBtn = document.createElement("button");
-                prevBtn.textContent = "🠈";
-                const nextBtn = document.createElement("button");
-                nextBtn.textContent = "🠊";
-                imagesHandles.appendChild(prevBtn);
-                imagesHandles.appendChild(nextBtn);
-                let currentImageIndex = 0;
-                prevBtn.addEventListener("click", () => {
-                    currentImageIndex =
-                        (currentImageIndex - 1 + project.images.length) %
-                        project.images.length;
-                    img.src = project.images[currentImageIndex];
-                });
-                nextBtn.addEventListener("click", () => {
-                    currentImageIndex =
-                        (currentImageIndex + 1) % project.images.length;
-                    img.src = project.images[currentImageIndex];
-                });
+                if (project.images.length > 1) {
+                    const imagesHandles = document.createElement("div");
+                    imagesHandles.classList.add("handles");
+                    imagesDiv.appendChild(imagesHandles);
+                    const prevBtn = document.createElement("button");
+                    prevBtn.textContent = "🠈";
+                    const nextBtn = document.createElement("button");
+                    nextBtn.textContent = "🠊";
+                    imagesHandles.appendChild(prevBtn);
+                    imagesHandles.appendChild(nextBtn);
+                    let currentImageIndex = 0;
+                    prevBtn.addEventListener("click", () => {
+                        currentImageIndex =
+                            (currentImageIndex - 1 + project.images.length) %
+                            project.images.length;
+                        img.src = project.images[currentImageIndex];
+                    });
+                    nextBtn.addEventListener("click", () => {
+                        currentImageIndex =
+                            (currentImageIndex + 1) % project.images.length;
+                        img.src = project.images[currentImageIndex];
+                    });
+                }
             }
 
             project.paragraphs.forEach((para) => {

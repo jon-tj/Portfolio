@@ -21,6 +21,7 @@ const CERTIFICATIONS = [
         title: "GitHub Foundations",
         issuer: "GitHub",
         issueDate: "2025-10",
+        credentialLink: "https://learn.microsoft.com/api/credentials/share/en-us/jontj-9073/8D841C6000E748F6?sharingId=3D8A207BA2DC3CAE",
         description: [
             `Recognizes foundational knowledge of GitHub, including version control, collaboration, and workflow best practices for software development projects.`
         ]

@@ -131,6 +131,12 @@ button:hover {
     .cols-5-5 {
         grid-template-columns: 1fr; /* single column */
     }
+    section {
+        width: 90%;
+    }
+    .info-card {
+        padding: 1rem;
+    }
 }
 
 div.tags-container {

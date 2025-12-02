@@ -13,7 +13,7 @@
         </header>
         <main>
             <section class="header fade-in">
-                <div class="cols-7-3">
+                <div class="cols-6-4">
                     <aside>
                         <h1>Jon Henrik Tjemsland</h1>
                         <p>Software Engineer</p>
@@ -144,19 +144,11 @@
 
             <section>
                 <br />
-                <h1>Other Projects</h1>
+                <h1>Certifications</h1>
                 <hr />
             </section>
-
-            <section class="description">
-                <div class="info-card">
-                    <h1>Simple Deployment SPA</h1>
-                    <p>
-                        This is a simple single-page application (SPA) created
-                        to demonstrate deployment capabilities. It features a
-                        clean design and highlights key information effectively.
-                    </p>
-                </div>
+            <section>
+                <div class="certifications-container cols-5-5"></div>
             </section>
         </main>
         <footer></footer>
@@ -165,22 +157,10 @@
     <script src="scripts/filter-tags.js"></script>
     <script src="scripts/tags.js"></script>
     <script src="scripts/projects.js"></script>
+    <script src="scripts/certifications.js"></script>
 
     <script>
         const projectsContainer = document.getElementById("projects-container");
-        // Should follow this pattern:
-        /*
-                <section data-tags="c# python">
-                    <div class="info-card">
-                        <h2>Project Alpha</h2>
-                        <p>
-                            A web application built with C# and Python that
-                            streamlines data processing tasks.
-                        </p>
-                        <div class="tags-container" tags="c# python"></div>
-                    </div>
-                </section>
-            */
         for (const project of PROJECTS) {
             const projectCard = document.createElement("section");
             projectCard.setAttribute("data-tags", project.tags.join(" "));
@@ -297,6 +277,39 @@
                 button.innerHTML = tagDetails.svg + tagDetails.displayName;
                 container.appendChild(button);
             }
+        }
+
+        const certificationsSection = document.querySelector(
+            ".certifications-container"
+        );
+        for (const cert of CERTIFICATIONS) {
+            const certCard = document.createElement("div");
+            certCard.classList.add("info-card");
+            certificationsSection.appendChild(certCard);
+
+            const title = document.createElement("h2");
+            title.textContent = cert.title;
+            certCard.appendChild(title);
+
+            const subtitle = document.createElement("strong");
+            subtitle.textContent = `${cert.issuer} | Issued: ${cert.issueDate}`;
+            certCard.appendChild(subtitle);
+
+            if (cert.credentialLink) {
+                const credLink = document.createElement("p");
+                credLink.innerHTML = `<strong>Credential:</strong> <a href="${cert.credentialLink}" target="_blank">View Credential</a>`;
+                certCard.appendChild(credLink);
+            }
+
+            certCard.appendChild(document.createElement("hr"));
+
+            const description = document.createElement("div");
+            cert.description.forEach((para) => {
+                const p = document.createElement("p");
+                p.textContent = para;
+                description.appendChild(p);
+            });
+            certCard.appendChild(description);
         }
     </script>
 </html>

@@ -6,19 +6,19 @@ const PROJECTS = [
         tags: ["angular", "figma", "typescript", "java", "html", "git", "gitlab", "postgresql", "devops"],
         paragraphs: [
             ` As a fullstack developer on the Pathfinders team, I helped modernize Halliburton Landmark's 
-            oil-well design software in collaboration with Aker BP. The project aimed to replace 
-            the existing solution with a more flexible platform that supports sensitivity analysis 
-            and AI-driven features.
-            `,
+        oil-well design software in collaboration with Aker BP. The project aimed to replace 
+        the existing solution with a more flexible platform that supports sensitivity analysis 
+        and AI-driven features.
+        `,
             ` I built dynamic UI components in Angular and PrimeNG, created backward-compatible APIs, 
-            and contributed to a scalable Java backend capable of handling large datasets. Using 
-            TypeScript and clear HTML structures, I focused on delivering a smooth and intuitive 
-            user experience for working with complex engineering data.
-            `,
+        and contributed to a scalable Java backend capable of handling large datasets. Using 
+        TypeScript and clear HTML structures, I focused on delivering a smooth and intuitive 
+        user experience for working with complex engineering data.
+        `,
             ` I also improved CI/CD workflows in GitLab, enabling faster, safer releases. The upgraded 
-            solution helps Aker BP streamline well planning, reduce costs and risk, and make more 
-            informed, data-driven decisions.
-            `,
+        solution helps Aker BP streamline well planning, reduce costs and risk, and make more 
+        informed, data-driven decisions.
+        `,
         ],
     },
 
@@ -42,19 +42,14 @@ const PROJECTS = [
         ],
         paragraphs: [
             `
-      LootVault is an e-commerce platform for gaming products, where users can browse, shop, 
-      and enjoy a fun, interactive experience. I worked with my team to design and build the 
-      full stack, from the React frontend to the .NET backend.
-      `,
+        LootVault is an e-commerce platform for gaming products, where users can browse, shop, 
+        and enjoy a fun, interactive experience. I worked with my team to design and build the 
+        full stack, from the React frontend to the .NET backend.
+        `,
             `
-      My role focused on implementing features, handling payment integration, and connecting 
-      frontend and backend seamlessly. I also contributed to team coordination and Agile 
-      processes, ensuring that we delivered a working demo on time.
-      `,
-            `
-      This project taught me a lot about fullstack development, cloud deployment, and working 
-      effectively in a fast-paced team. It's something I'm proud to showcase in my portfolio!
-      `
+        This project taught me a lot about fullstack development, cloud deployment, and working 
+        effectively in a fast-paced team. It's something I'm proud to showcase in my portfolio!
+        `
         ],
         images: [
             "images/projects/lootvault-1.png",
@@ -77,25 +72,15 @@ const PROJECTS = [
             "git",
         ],
         paragraphs: [
-            `
-      For my bachelor's at UiS, I worked on developing an unsupervised learning system using 
-      autoencoders in Python with TensorFlow and Keras to analyze MRI images. The goal was to explore how 
-      structural brain changes can help characterize Alzheimer's and related disorders, and to 
-      evaluate whether autonomous systems can support early detection.
-      `,
-            `
-      I collected and preprocessed large MRI datasets from multiple clinical studies, and experimented with several ML 
-      architectures and compared internal representations across models to understand how 
-      different structures captured patterns in the brain. By integrating population-level datasets, 
-      I helped uncover correlations between brain changes and broader health trends, supporting 
-      further research at the university.
-      `,
-            `
-      The system was developed securely on UiS's Unix servers via SSH, ensuring compliance with 
-      data-handling standards. I used Git for version control and set up GitHub Projects to 
-      coordinate tasks within the team. The result was a research-ready platform that UiS could 
-      confidently build on for future studies in early detection of neurodegenerative diseases.
-      `
+            ` For my bachelor's at UiS, I worked on developing an unsupervised learning system using 
+        autoencoders in Python with TensorFlow and Keras to analyze MRI images. The goal was to explore how 
+        structural brain changes can help characterize Alzheimer's and related disorders, and to 
+        evaluate whether autonomous systems can support early detection.
+        `,
+            ` I collected and preprocessed large MRI datasets from multiple clinical studies, and experimented with several ML 
+        architectures and compared internal representations across models to understand how 
+        different structures captured patterns in the brain.
+        `,
         ],
         images: [
             "images/projects/dementia-1.png",
@@ -104,21 +89,27 @@ const PROJECTS = [
         ]
     },
     {
-        name: "Techxplosion Hackathon",
+        name: "Techxplosion Hackathon - Watts up",
         role: "Python Developer",
-        links: { "Public repo": "", "LinkedIn Post": "https://www.linkedin.com/posts/-lan-anh-tran-_futureengineers-innovation-energyindustry-activity-7297177975542706176-XEgu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEbbP5kBUYSRcj__qnvNXKsgAe5ktpQmzjg" },
+        links: { "Public repo": "https://github.com/CKolle/hackathon-equinor", "LinkedIn Post": "https://www.linkedin.com/posts/-lan-anh-tran-_futureengineers-innovation-energyindustry-activity-7297177975542706176-XEgu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEbbP5kBUYSRcj__qnvNXKsgAe5ktpQmzjg" },
         tags: [
             "html",
             "js",
+            "python",
+            "html"
         ],
-        duration: ["2025-02", "2025-02"],
+        duration: ["2025-02-15", "2025-02-16"],
         paragraphs: [
-            `Won the Equinor-sponsored hackathon at the University of Stavanger by building a simulation of
-            the power grid using pure JS. The simulation modeled energy production, consumption,
-            and distribution across a network of nodes, allowing users to visualize grid dynamics in real-time.`,
+            `My team won the Equinor-sponsored hackathon at UiS by building a simulation game called 'Watts up', modeling the power grid,
+        renewable energy sources and resource management in pure JS within 24 hours. This required that we make our own game engine, and we decided to follow the ECS pattern.
+        The simulation modeled energy production, consumption, and distribution across a custom network of nodes, allowing users to visualize grid dynamics in real-time.`,
+            `The simulation used data scraped in python from free weather services and the public sector, and featured multiple
+        interpolation modes to retain realism at very small timescales. Game art and SFX was made by hand and music was AI-generated.`,
+            `Watts Up is an interactive application designed to help people learn and explore the effect of different energy sources on GDP, production, consumption and how they are affected by the amount of sunshine and wind.`
         ],
         images: [
-            "images/projects/hackathon-1.png"
+            "images/projects/hackathon-1.png",
+            "images/projects/hackathon-2.png",
         ],
     },
     {
@@ -136,18 +127,16 @@ const PROJECTS = [
             "git",
         ],
         paragraphs: [
-            `
-      As a .NET developer and team lead, I built an online multiplayer drawing game where 
-      players join rooms, chat in real time, and guess what the host is drawing. I implemented 
-      features such as authentication, scoreboards, host rotation, chat, and live game events, 
-      all developed under domain-driven design principles and an Agile workflow.
-      `,
-            `
-      For the frontend we used Jinja2 templates, Bootstrap, and JavaScript to create a lively and 
-      intuitive user experience. MediatR supported clean flows for interactive game events, and 
-      sockets were used to enable fast and responsive communication between players. This made 
-      the gameplay feel dynamic and engaging.
-      `
+            ` As a .NET developer and team lead, I built an online multiplayer drawing game where 
+        players join rooms, chat in real time, and guess what the host is drawing. I implemented 
+        features such as authentication, scoreboards, host rotation, chat, and live game events, 
+        all developed under domain-driven design principles and an Agile workflow.
+        `,
+            ` For the frontend we used Jinja2 templates, Bootstrap, and JavaScript to create a lively and 
+        intuitive user experience. MediatR supported clean flows for interactive game events, and 
+        sockets were used to enable fast and responsive communication between players. This made 
+        the gameplay feel dynamic and engaging.
+        `
         ]
     },
     {
@@ -162,23 +151,19 @@ const PROJECTS = [
             "git",
         ],
         paragraphs: [
-            `
-      As an ML Engineer, I built a system for estimating disease likelihood based on symptom 
-      descriptions. I collected data through web scraping using Selenium and Python's requests 
-      module, and cleaned and structured the datasets with Pandas.
-      `,
-            `
-      I applied manual and library-based NLP techniques using TensorFlow and SpaCy, enabling the 
-      model to use symptoms to predict posterior probabilities of diseases from unstructured medical text.
-      GitHub branching made it easy to test several models side-by-side without disrupting ongoing 
-      development, helping keep the workflow efficient and organized.
-      `,
-            `
-      As a Frontend Developer, I created a simple and user-friendly interface where users could 
-      input symptoms and receive model predictions. The website was built with Python and Flask, 
-      using HTML5 and Jinja templates to create a clean, dynamic user experience that connected 
-      seamlessly to the backend model.
-      `
+            ` As an ML Engineer, I built a system for estimating disease likelihood based on symptom 
+        descriptions. I collected data through web scraping using Selenium and pure python requests,
+        and cleaned the data sets with Pandas.
+        `,
+            ` As one of my first NLP projects, I tested by making my own NLP models, as well as using open-
+        source libraries like SpaCy, TensorFlow and Keras. The result was various models predicting
+        posterior probability of diseases from an unstructured natural language input describing symptoms.
+        `,
+            ` As a Frontend Developer, I created a simple and user-friendly interface where users could 
+        input symptoms and receive model predictions. The website was built with Python and Flask, 
+        using HTML5 and Jinja templates to create a clean, dynamic user experience that connected 
+        seamlessly to the backend model.
+        `
         ]
     }
 ];

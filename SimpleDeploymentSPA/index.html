@@ -335,13 +335,13 @@
             button.addEventListener("click", () => {
                 if (button.classList.contains("active-filter")) {
                     // Remove filter
-                    filterTags("", "projects-container");
                     filterTags("", "work-experience-container");
+                    filterTags("", "projects-container");
                     button.classList.remove("active-filter");
                     return;
                 }
-                filterTags(tag, "projects-container");
                 filterTags(tag, "work-experience-container");
+                filterTags(tag, "projects-container");
                 const buttons =
                     qualificationsList.getElementsByTagName("button");
                 for (const btn of buttons) {

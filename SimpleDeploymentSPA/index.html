@@ -147,7 +147,9 @@
                 <h1>Work Experience</h1>
                 <hr />
             </section>
-            <div id="work-experience-container"></div>
+            <section>
+                <div id="work-experience-container" class="cols-5-5"></div>
+            </section>
 
             <section>
                 <br />
@@ -163,10 +165,45 @@
     <script src="scripts/theme-switcher.js"></script>
     <script src="scripts/filter-tags.js"></script>
     <script src="scripts/tags.js"></script>
+    <script src="scripts/work-experience.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/certifications.js"></script>
 
     <script>
+        const workExperienceContainer = document.getElementById(
+            "work-experience-container"
+        );
+        for (const work of WORK_EXPERIENCES) {
+            const workCard = document.createElement("div");
+            workCard.setAttribute("data-tags", work.tags.join(" "));
+            workExperienceContainer.appendChild(workCard);
+
+            const infoCard = document.createElement("div");
+            infoCard.classList.add("info-card");
+            workCard.appendChild(infoCard);
+
+            const title = document.createElement("h2");
+            title.textContent = work.employer;
+            infoCard.appendChild(title);
+
+            const subtitle = document.createElement("strong");
+            subtitle.textContent = `${work.role} | ${work.duration[0]} - ${work.duration[1]}`;
+            infoCard.appendChild(subtitle);
+
+            infoCard.appendChild(document.createElement("hr"));
+
+            work.paragraphs.forEach((para) => {
+                const p = document.createElement("p");
+                p.textContent = para;
+                infoCard.appendChild(p);
+            });
+
+            const tagsContainer = document.createElement("div");
+            tagsContainer.classList.add("tags-container");
+            tagsContainer.setAttribute("tags", work.tags.join(" "));
+            infoCard.appendChild(tagsContainer);
+        }
+
         const projectsContainer = document.getElementById("projects-container");
         for (const project of PROJECTS) {
             const projectCard = document.createElement("section");
@@ -299,10 +336,12 @@
                 if (button.classList.contains("active-filter")) {
                     // Remove filter
                     filterTags("", "projects-container");
+                    filterTags("", "work-experience-container");
                     button.classList.remove("active-filter");
                     return;
                 }
                 filterTags(tag, "projects-container");
+                filterTags(tag, "work-experience-container");
                 const buttons =
                     qualificationsList.getElementsByTagName("button");
                 for (const btn of buttons) {

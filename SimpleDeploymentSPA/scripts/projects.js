@@ -3,7 +3,7 @@ const PROJECTS = [
         name: "Halliburton / Aker BP Pathfinders Modernization for AI",
         duration: ["2025-09", "present"],
         role: "Fullstack Developer",
-        tags: ["angular", "figma", "typescript", "java", "html", "git", "gitlab", "postgresql", "devops"],
+        tags: ["angular", "figma", "typescript", "java", "html", "git", "gitlab", "postgres", "devops"],
         paragraphs: [
             ` As a fullstack developer on the Pathfinders team, I helped modernize Halliburton Landmark's 
         oil-well design software in collaboration with Aker BP. The project aimed to replace 

@@ -95,8 +95,7 @@ const PROJECTS = [
         tags: [
             "html",
             "js",
-            "python",
-            "html"
+            "python"
         ],
         duration: ["2025-02-15", "2025-02-16"],
         paragraphs: [

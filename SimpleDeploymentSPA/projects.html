@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jon Henrik Tjemsland</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="theme.dark.css" id="theme-stylesheet" />
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <button>🏠 Home</button>
+            </a>
+            <button id="theme-toggle" class="theme-button">🌙 Dark Mode</button>
+        </header>
+        <main>
+            <section>
+                <h1>Selected Projects</h1>
+                <hr />
+                <div id="qualifications-list" class="tags-container"></div>
+            </section>
+            <div id="projects-container"></div>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/filter-tags.js"></script>
+    <script src="scripts/tags.js"></script>
+    <script src="scripts/projects.js"></script>
+
+    <script>
+        const projectsContainer = document.getElementById("projects-container");
+        for (const project of PROJECTS) {
+            const projectCard = document.createElement("section");
+            projectCard.setAttribute("data-tags", project.tags.join(" "));
+            projectsContainer.appendChild(projectCard);
+
+            const infoCardContainer = document.createElement("div");
+            projectCard.appendChild(infoCardContainer);
+
+            const infoCard = document.createElement("div");
+            infoCard.classList.add("info-card", "project-container");
+            infoCardContainer.appendChild(infoCard);
+
+            const title = document.createElement("h2");
+            title.textContent = project.name;
+            infoCard.appendChild(title);
+
+            const subtitle = document.createElement("strong");
+            subtitle.textContent = `${project.role} | ${project.duration[0]} - ${project.duration[1]}`;
+            infoCard.appendChild(subtitle);
+
+            if (project.links) {
+                const linksDiv = document.createElement("div");
+                linksDiv.innerHTML = "<strong>Links:</strong> ";
+                linksDiv.classList.add("project-links");
+                for (const [linkName, linkUrl] of Object.entries(
+                    project.links,
+                )) {
+                    const linkAnchor = document.createElement("a");
+                    linkAnchor.href = linkUrl;
+                    linkAnchor.target = "_blank";
+                    linkAnchor.textContent = linkName;
+                    if (linksDiv.childElementCount > 1) {
+                        const separator = document.createTextNode(" | ");
+                        linksDiv.appendChild(separator);
+                    }
+                    linksDiv.appendChild(linkAnchor);
+                }
+                infoCard.appendChild(linksDiv);
+            }
+
+            infoCard.appendChild(document.createElement("hr"));
+
+            const description = document.createElement("div");
+            if (project.images && project.images.length > 0) {
+                infoCardContainer.classList.add("cols-6-4");
+
+                const imagesDiv = document.createElement("div");
+                imagesDiv.classList.add("project-images");
+                const img = document.createElement("img");
+                img.src = project.images[0];
+                img.alt = `${project.name} screenshot`;
+                imagesDiv.appendChild(img);
+                infoCardContainer.appendChild(imagesDiv);
+
+                if (project.images.length > 1) {
+                    const imagesHandles = document.createElement("div");
+                    imagesHandles.classList.add("handles");
+                    imagesDiv.appendChild(imagesHandles);
+                    const prevBtn = document.createElement("button");
+                    prevBtn.textContent = "🠈";
+                    const nextBtn = document.createElement("button");
+                    nextBtn.textContent = "🠊";
+                    imagesHandles.appendChild(prevBtn);
+                    imagesHandles.appendChild(nextBtn);
+                    let currentImageIndex = 0;
+                    prevBtn.addEventListener("click", () => {
+                        currentImageIndex =
+                            (currentImageIndex - 1 + project.images.length) %
+                            project.images.length;
+                        img.src = project.images[currentImageIndex];
+                    });
+                    nextBtn.addEventListener("click", () => {
+                        currentImageIndex =
+                            (currentImageIndex + 1) % project.images.length;
+                        img.src = project.images[currentImageIndex];
+                    });
+                }
+            }
+
+            project.paragraphs.forEach((para) => {
+                const p = document.createElement("p");
+                p.textContent = para;
+                description.appendChild(p);
+            });
+            infoCard.appendChild(description);
+
+            if (project.grade) {
+                const gradePara = document.createElement("p");
+                gradePara.innerHTML = `<strong>Grade:</strong> <span class='grade'>${project.grade}</span>`;
+                infoCard.appendChild(gradePara);
+            }
+
+            const tagsContainer = document.createElement("div");
+            tagsContainer.classList.add("tags-container");
+            tagsContainer.setAttribute("tags", project.tags.join(" "));
+            infoCard.appendChild(tagsContainer);
+        }
+
+        const qualificationsList = document.getElementById(
+            "qualifications-list",
+        );
+        for (const tag of [
+            "c#",
+            "python",
+            "js",
+            "html",
+            "tensorflow",
+            "keras",
+            "sqlite",
+            "postgres",
+            "angular",
+            "figma",
+            "docker",
+            "git",
+            "github",
+            "gitlab",
+            "devops",
+            // "flutter",
+        ]) {
+            const tagDetails = TAGS_DETAILS[tag];
+            if (!tagDetails) {
+                console.warn(`Tag details not found for tag: ${tag}`);
+                continue;
+            }
+            const li = document.createElement("li");
+            const button = document.createElement("button");
+            button.innerHTML = tagDetails.svg + tagDetails.displayName;
+            qualificationsList.appendChild(button);
+            button.addEventListener("click", () => {
+                if (button.classList.contains("active-filter")) {
+                    // Remove filter
+                    filterTags("", "projects-container");
+                    button.classList.remove("active-filter");
+                    return;
+                }
+                filterTags(tag, "projects-container");
+                const buttons =
+                    qualificationsList.getElementsByTagName("button");
+                for (const btn of buttons) {
+                    btn.classList.remove("active-filter");
+                }
+                button.classList.add("active-filter");
+            });
+        }
+
+        const tagContainers = document.getElementsByClassName("tags-container");
+        for (const container of tagContainers) {
+            if (!container.hasAttribute("tags")) continue;
+            const tags = container.getAttribute("tags").split(" ");
+            for (const tag of tags) {
+                const tagDetails = TAGS_DETAILS[tag];
+                if (!tagDetails) continue;
+                const button = document.createElement("button");
+                button.innerHTML = tagDetails.svg + tagDetails.displayName;
+                container.appendChild(button);
+            }
+        }
+    </script>
+</html>

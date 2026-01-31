@@ -66,6 +66,7 @@ header {
     background-color: var(--color-bg);
     display: flex;
     justify-content: right;
+    gap: 1rem;
     align-items: center;
     padding: 1rem;
 }

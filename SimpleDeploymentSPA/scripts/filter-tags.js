@@ -10,5 +10,6 @@ function filterTags(tag, containerId) {
             item.style.display = 'none';
         }
     }
-    container.scrollIntoView({ behavior: 'smooth' });
+    if (tag)
+        container.scrollIntoView({ behavior: 'smooth' });
 }

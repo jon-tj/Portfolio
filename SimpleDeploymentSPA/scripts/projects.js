@@ -20,8 +20,8 @@ const PROJECTS = [
         informed, data-driven decisions.
         `,
         ],
+        highlighted: true,
     },
-
     {
         name: "LootVault",
         grade: "A",
@@ -56,7 +56,8 @@ const PROJECTS = [
             "images/projects/lootvault-2.png",
             "images/projects/lootvault-3.png",
             "images/projects/lootvault-4.png",
-        ]
+        ],
+        highlighted: true,
     },
     {
         name: "Image Recognition & Factor Analysis for Alzheimer's Characterization",
@@ -86,7 +87,8 @@ const PROJECTS = [
             "images/projects/dementia-1.png",
             "images/projects/dementia-2.png",
             "images/projects/dementia-3.png",
-        ]
+        ],
+        highlighted: true,
     },
     {
         name: "Techxplosion Hackathon - Watts up",
@@ -110,6 +112,7 @@ const PROJECTS = [
             "images/projects/hackathon-1.png",
             "images/projects/hackathon-2.png",
         ],
+        highlighted: true,
     },
     {
         name: "Online Multiplayer Drawing Game",
@@ -136,7 +139,8 @@ const PROJECTS = [
         sockets were used to enable fast and responsive communication between players. This made 
         the gameplay feel dynamic and engaging.
         `
-        ]
+        ],
+        highlighted: true,
     },
     {
         name: "AI Clinical Diagnoses",
@@ -163,6 +167,30 @@ const PROJECTS = [
         using HTML5 and Jinja templates to create a clean, dynamic user experience that connected 
         seamlessly to the backend model.
         `
-        ]
-    }
+        ],
+        highlighted: true,
+    },
+    {
+        name: "Family Secret Santa",
+        duration: ["2024-12", "2024-12"],
+        role: "Frontend Developer",
+        tags: ["typescript", "javascript", "html", "css", "github", "github-pages"],
+        paragraphs: [
+            ` I built a lightweight Secret Santa website for my family to run organized, fair, and repeatable 
+        gift-giver draws. The goal was to replace ad-hoc name pulling with a simple, transparent tool that 
+        everyone could trust and reuse each year. In particular, a system that allowed fair draws without
+        duplicates and excluding co-gifters required the development of a custom system!
+        `,
+            ` The project gave me a deeper understanding of how randomness works in JavaScript, including the 
+        limitations of naive random selection. To ensure fairness and avoid bias, I implemented a custom 
+        shuffling algorithm rather than relying on basic built-in approaches.
+        `,
+            ` The application was written in TypeScript with a focus on clarity and correctness. Due to time 
+        constraints, it was deployed as a static site using GitHub Pages, which reinforced my ability to 
+        scope features, make pragmatic trade-offs, and ship a complete, working solution quickly.
+        `,
+        ],
+        highlighted: false,
+    },
+
 ];

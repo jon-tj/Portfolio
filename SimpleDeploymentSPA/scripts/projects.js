@@ -143,6 +143,26 @@ const PROJECTS = [
         highlighted: false,
     },
     {
+        name: "Fluid Dynamics Simulation",
+        duration: ["2025-10", "present"],
+        role: "Fullstack Developer",
+        tags: ["core", "c#", "git", "angular", "js", "html"],
+        images: [
+            "images/projects/fluids-1.gif",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/Fluids" },
+        paragraphs: [
+            `This project was created as an exploration into various differential equation solvers and physics, and
+        implements various solvers such as density fields and particle simulations, which is served in a web
+        frontend, developed in Angular (as practice for my day job).`,
+            `The project is build on the standard DotNet (ASP.NET) backend, serving a web frontend, which is definitely
+        one of my favorite tech stacks.`,
+            `The main purpose of this project was to build intuition in a field that is very important to the oil sector,
+        a very large sector in my region, and to disprove a claim my dad made about the physics making an airplane fly :)`,
+        ],
+        highlighted: false,
+    },
+    {
         name: "AI Clinical Diagnoses",
         grade: "A",
         role: "ML Engineer, Frontend Developer",
@@ -168,6 +188,68 @@ const PROJECTS = [
         using HTML5 and Jinja templates to create a clean, dynamic user experience that connected 
         seamlessly to the backend model.
         `
+        ],
+        highlighted: false,
+    },
+    {
+        name: "Discord Bot",
+        duration: ["2024-5", "present"],
+        role: "Python Developer",
+        tags: ["python", "c#", "js", "html", "tensorflow"],
+        images: [
+            "images/projects/discord-bot-1.png",
+            "images/projects/discord-bot-2.png",
+        ],
+        paragraphs: [
+            `The project is an amalgamation of various projects, providing an easy access hub for
+        various utility scripts and projects I've made, built in a modular fashion so the bot behaviour
+        can be modified at run-time. Among the interesting modules I created were a fully functional shell,
+        an LLM interface to connect to AI, a remote script scheduler, and a stock prediction module.
+        `,
+        ],
+        highlighted: false,
+    },
+    {
+        name: "Flask Stock Trading Application",
+        duration: ["2023-7", "2023-10"],
+        role: "Fullstack Developer",
+        tags: ["python", "c#", "js", "html", "tensorflow", "github"],
+        images: [
+            "images/projects/flask-trader-1.png",
+            "images/projects/flask-trader-2.png",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/stocks-trading-flask", "Documentation": "https://github.com/jon-tj/stocks-trading-flask/blob/main/server/templates/docs.html" },
+        paragraphs: [
+            ` I developed a minimalistic stock trading and analysis application designed as a visual IDE 
+        for financial decision-making. The goal was to provide an environment that is easy to get started 
+        with, yet powerful enough to support advanced technical analysis and strategy experimentation.
+        NOTE: To see the documentation, I suggest you start the Flask server and click the Help button.
+        `,
+            ` The application supports multiple markets and retrieves historical stock data from Yahoo Finance, 
+        storing it locally for fast access and repeated testing. Loaded stocks are retained in memory to 
+        mirror real-world quantitative workflows, allowing for rapid iteration when developing and testing 
+        strategies.
+        `,
+            ` A key focus of the project was scriptability. Users can write and upload custom Python-based 
+        indicators, tests, and predictors, with function parameters automatically exposed through the UI. 
+        This required careful API design, flexible data pipelines, and a strong emphasis on transparency 
+        through rich visualizations and configurable settings.
+        `,
+        ],
+        highlighted: false,
+    },
+    {
+        name: "PhysSketch",
+        duration: ["2023-8", "2023-9"],
+        role: "Fullstack Developer",
+        tags: ["js", "html"],
+        images: [
+            "images/projects/phys-sketch-1.gif",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/PhysSketch", "Preview": "https://htmlpreview.github.io/?https://github.com/jon-tj/PhysSketch/blob/main/index.html" },
+        paragraphs: [
+            `Create and share simple physics models that run with Verlet Integration.
+        Use the space bar or the play button in the top corner to play/pause the simulation.`,
         ],
         highlighted: false,
     },
@@ -198,67 +280,4 @@ const PROJECTS = [
         ],
         highlighted: false,
     },
-    {
-        name: "Discord Bot",
-        duration: ["2024-5", "present"],
-        role: "Python Developer",
-        tags: ["python", "c#", "js", "html"],
-        images: [
-            "images/projects/discord-bot-1.png",
-            "images/projects/discord-bot-2.png",
-        ],
-        paragraphs: [
-            `The project is an amalgamation of various projects, providing an easy access hub for
-        various utility scripts and projects I've made, built in a modular fashion so the bot behaviour
-        can be modified at run-time. Among the interesting modules I created were a fully functional shell,
-        an LLM interface to connect to AI, a remote script scheduler, and a stock prediction module.
-        `,
-        ],
-        highlighted: false,
-    },
-    {
-        name: "PhysSketch",
-        duration: ["2023-8", "2023-9"],
-        role: "Fullstack Developer",
-        tags: ["js", "html"],
-        images: [
-            "images/projects/phys-sketch-1.gif",
-        ],
-        links: { "Public repo": "https://github.com/jon-tj/PhysSketch", "Preview": "https://htmlpreview.github.io/?https://github.com/jon-tj/PhysSketch/blob/main/index.html" },
-        paragraphs: [
-            `Create and share simple physics models that run with Verlet Integration.
-        Use the space bar or the play button in the top corner to play/pause the simulation.`,
-        ],
-        highlighted: false,
-    },
-    {
-        name: "Flask Stock Trading Application",
-        duration: ["2023-7", "2023-10"],
-        role: "Fullstack Developer",
-        tags: ["python", "c#", "js", "html", "ml"],
-        images: [
-            "images/projects/flask-trader-1.png",
-            "images/projects/flask-trader-2.png",
-        ],
-        links: { "Public repo": "https://github.com/jon-tj/stocks-trading-flask", "Documentation": "https://github.com/jon-tj/stocks-trading-flask/blob/main/server/templates/docs.html" },
-        paragraphs: [
-            ` I developed a minimalistic stock trading and analysis application designed as a visual IDE 
-        for financial decision-making. The goal was to provide an environment that is easy to get started 
-        with, yet powerful enough to support advanced technical analysis and strategy experimentation.
-        NOTE: To see the documentation, I suggest you start the Flask server and click the Help button.
-        `,
-            ` The application supports multiple markets and retrieves historical stock data from Yahoo Finance, 
-        storing it locally for fast access and repeated testing. Loaded stocks are retained in memory to 
-        mirror real-world quantitative workflows, allowing for rapid iteration when developing and testing 
-        strategies.
-        `,
-            ` A key focus of the project was scriptability. Users can write and upload custom Python-based 
-        indicators, tests, and predictors, with function parameters automatically exposed through the UI. 
-        This required careful API design, flexible data pipelines, and a strong emphasis on transparency 
-        through rich visualizations and configurable settings.
-        `,
-        ],
-        highlighted: false,
-    },
-
 ];

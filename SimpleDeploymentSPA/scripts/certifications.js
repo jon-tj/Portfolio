@@ -34,5 +34,14 @@ const CERTIFICATIONS = [
         description: [
             `Demonstrates understanding of Scrum framework principles and practices, including team roles, events, and artifacts. Validates ability to facilitate Agile teams and foster collaboration and continuous improvement.`
         ]
-    }
+    },
+    {
+        title: "Certified Web Developer",
+        issuer: "W3Schools",
+        issueDate: "2022-10",
+        credentialLink: "https://verify.w3schools.com/5WLVF7YET?_gl=1*1u8ddon*_ga*MjY3MDkwODgyLjE3NjEyNTE1Nzg.*_ga_9YNMTB56NB*czE3Njk4ODUzOTckbzkkZzEkdDE3Njk4ODU0MTkkajQ0JGwwJGgw",
+        description: [
+            `Certified Developer capable of comfortably using web development tools and languages such as HTML5, CSS and JavaScript.`
+        ]
+    },
 ];

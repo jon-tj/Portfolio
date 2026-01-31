@@ -178,6 +178,7 @@ const PROJECTS = [
         tags: ["js", "html", "github"],
         images: [
             "images/projects/secret-santa-1.png",
+            "images/projects/secret-santa-2.png",
         ],
         links: { "Public repo": "https://github.com/jon-tj/holiday/tree/main/christmas/secret-santa/secret-santa", "Preview": "https://htmlpreview.github.io/?https://github.com/jon-tj/holiday/blob/main/christmas/secret-santa/build.html" },
         paragraphs: [
@@ -193,6 +194,68 @@ const PROJECTS = [
             ` The application was written in TypeScript with a focus on clarity and correctness. Due to time 
         constraints, it was deployed as a static site using GitHub Pages, which reinforced my ability to 
         scope features, make pragmatic trade-offs, and ship a complete, working solution quickly.
+        `,
+        ],
+        highlighted: false,
+    },
+    {
+        name: "Discord Bot",
+        duration: ["2024-5", "present"],
+        role: "Python Developer",
+        tags: ["python", "c#", "js", "html"],
+        images: [
+            "images/projects/discord-bot-1.png",
+            "images/projects/discord-bot-2.png",
+        ],
+        paragraphs: [
+            `The project is an amalgamation of various projects, providing an easy access hub for
+        various utility scripts and projects I've made, built in a modular fashion so the bot behaviour
+        can be modified at run-time. Among the interesting modules I created were a fully functional shell,
+        an LLM interface to connect to AI, a remote script scheduler, and a stock prediction module.
+        `,
+        ],
+        highlighted: false,
+    },
+    {
+        name: "PhysSketch",
+        duration: ["2023-8", "2023-9"],
+        role: "Fullstack Developer",
+        tags: ["js", "html"],
+        images: [
+            "images/projects/phys-sketch-1.gif",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/PhysSketch", "Preview": "https://htmlpreview.github.io/?https://github.com/jon-tj/PhysSketch/blob/main/index.html" },
+        paragraphs: [
+            `Create and share simple physics models that run with Verlet Integration.
+        Use the space bar or the play button in the top corner to play/pause the simulation.`,
+        ],
+        highlighted: false,
+    },
+    {
+        name: "Flask Stock Trading Application",
+        duration: ["2023-7", "2023-10"],
+        role: "Fullstack Developer",
+        tags: ["python", "c#", "js", "html", "ml"],
+        images: [
+            "images/projects/flask-trader-1.png",
+            "images/projects/flask-trader-2.png",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/stocks-trading-flask", "Documentation": "https://github.com/jon-tj/stocks-trading-flask/blob/main/server/templates/docs.html" },
+        paragraphs: [
+            ` I developed a minimalistic stock trading and analysis application designed as a visual IDE 
+        for financial decision-making. The goal was to provide an environment that is easy to get started 
+        with, yet powerful enough to support advanced technical analysis and strategy experimentation.
+        NOTE: To see the documentation, I suggest you start the Flask server and click the Help button.
+        `,
+            ` The application supports multiple markets and retrieves historical stock data from Yahoo Finance, 
+        storing it locally for fast access and repeated testing. Loaded stocks are retained in memory to 
+        mirror real-world quantitative workflows, allowing for rapid iteration when developing and testing 
+        strategies.
+        `,
+            ` A key focus of the project was scriptability. Users can write and upload custom Python-based 
+        indicators, tests, and predictors, with function parameters automatically exposed through the UI. 
+        This required careful API design, flexible data pipelines, and a strong emphasis on transparency 
+        through rich visualizations and configurable settings.
         `,
         ],
         highlighted: false,

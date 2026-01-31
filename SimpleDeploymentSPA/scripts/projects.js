@@ -140,10 +140,11 @@ const PROJECTS = [
         the gameplay feel dynamic and engaging.
         `
         ],
-        highlighted: true,
+        highlighted: false,
     },
     {
         name: "AI Clinical Diagnoses",
+        grade: "A",
         role: "ML Engineer, Frontend Developer",
         duration: ["2023-01", "2024-11"],
         tags: [
@@ -168,13 +169,17 @@ const PROJECTS = [
         seamlessly to the backend model.
         `
         ],
-        highlighted: true,
+        highlighted: false,
     },
     {
         name: "Family Secret Santa",
-        duration: ["2024-12", "2024-12"],
+        duration: ["2025-12", "2025-12"],
         role: "Frontend Developer",
-        tags: ["typescript", "javascript", "html", "css", "github", "github-pages"],
+        tags: ["js", "html", "github"],
+        images: [
+            "images/projects/secret-santa-1.png",
+        ],
+        links: { "Public repo": "https://github.com/jon-tj/holiday/tree/main/christmas/secret-santa/secret-santa", "Preview": "https://htmlpreview.github.io/?https://github.com/jon-tj/holiday/blob/main/christmas/secret-santa/build.html" },
         paragraphs: [
             ` I built a lightweight Secret Santa website for my family to run organized, fair, and repeatable 
         gift-giver draws. The goal was to replace ad-hoc name pulling with a simple, transparent tool that 

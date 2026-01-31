@@ -21,8 +21,10 @@ const WORK_EXPERIENCES = [
         role: "Teaching Assistant",
         duration: ["2023-08", "2025-05"],
         paragraphs: [
-            `Assisted students with coursework, exercises, and concepts across subjects such as web development, algorithms, and data structures. Helped students understand challenging topics and guided them through problem-solving.`,
-            `Courses I helped teach: Advanced programming (DAT240), Algorithms and data structures (DAT200), Web programming (DAT310), Applied mathematics and programming robots (ELE130), Python programming (DAT120)`
+            `Helped students understand challenging topics under one-on-one and group guidance in:
+            Advanced programming (DAT240), Algorithms and data structures (DAT200), Web programming (DAT310), Software engineering (DAT120),
+            Applied mathematics and programming robots (ELE130), Python programming (DAT120)`,
+            `I received an A in every course I've taught.`
         ],
         tags: [
             "c#",

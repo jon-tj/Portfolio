@@ -217,7 +217,7 @@
         }
 
         const projectsContainer = document.getElementById("projects-container");
-        for (const project of PROJECTS) {
+        for (const project of PROJECTS.filter((p) => p.highlighted)) {
             const projectCard = document.createElement("section");
             projectCard.setAttribute("data-tags", project.tags.join(" "));
             projectsContainer.appendChild(projectCard);

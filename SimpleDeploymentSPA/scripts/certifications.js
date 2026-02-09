@@ -27,6 +27,15 @@ const CERTIFICATIONS = [
         ]
     },
     {
+        title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+        issuer: "Microsoft",
+        issueDate: "2026-02",
+        credentialLink: "https://learn.microsoft.com/api/credentials/share/en-us/jontj-9073/E0582213F5D9C02E?sharingId=3D8A207BA2DC3CAE",
+        description: [
+            `Demonstrated understanding and knowledge of artificial intelligence and machine learning concepts, along with practical understanding of Microsoft Azure AI services. This certification validates the ability to identify common AI workloads, including machine learning, computer vision, natural language processing, and conversational AI, and to determine appropriate Azure services to support them.`
+        ]
+    },
+    {
         title: "Certified Scrum Master (CSM)",
         issuer: "Scrum Alliance",
         issueDate: "2025-11",

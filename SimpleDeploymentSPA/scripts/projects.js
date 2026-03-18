@@ -213,7 +213,7 @@ const PROJECTS = [
         name: "Flask Stock Trading Application",
         duration: ["2023-7", "2023-10"],
         role: "Fullstack Developer",
-        tags: ["python", "c#", "js", "html", "tensorflow", "github"],
+        tags: ["python", "js", "html", "tensorflow", "github"],
         images: [
             "images/projects/flask-trader-1.png",
             "images/projects/flask-trader-2.png",
